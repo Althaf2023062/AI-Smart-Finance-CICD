@@ -6,6 +6,11 @@ on:
       - main
       - develop
 
+  pull_request:
+    branches:
+      - main
+      - develop
+
 jobs:
   build-test-deploy:
     runs-on: ubuntu-latest
@@ -23,14 +28,14 @@ jobs:
         run: |
           pip install -r requirements.txt
 
-      - name: Install Testing Tools
+      - name: Install CI/CD Tools
         run: |
           pip install pytest flake8 bandit
 
-      - name: Lint Check
+      - name: Lint Validation
         run: flake8 .
 
-      - name: Run Tests
+      - name: Unit Testing
         run: pytest
 
       - name: Security Scan
@@ -42,5 +47,12 @@ jobs:
       - name: Deploy to Staging
         run: echo "Deploying to staging environment"
 
-      - name: Deploy to Production
+      - name: UAT Simulation
+        run: echo "Running user acceptance testing"
+
+      - name: Production Deployment
         run: echo "Simulated production deployment"
+
+      - name: Rollback Simulation
+        if: failure()
+        run: echo "Rollback deployment"
