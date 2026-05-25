@@ -1,6 +1,6 @@
 # AI Smart Finance Automation System - CI/CD
 
-![CI-CD Pipeline](https://github.com/Althaf2023062/AI-Smart-Finance-CICD/actions/workflows/ci-cd.yml/badge.svg)
+![CI-CD Pipeline](https://github.com/Althaf2023062/AI-Smart-Finance-CICD/actions/workflows/cicd.yml/badge.svg)
 
 ## Project Overview
 
