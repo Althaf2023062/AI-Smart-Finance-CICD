@@ -120,7 +120,7 @@ python app.py
 ai-smart-finance-cicd/
 │
 ├── .github/workflows/
-│   ├── ci-cd.yml
+│   ├── cicd.yml
 │   └── codeql.yml
 │
 ├── app/
@@ -132,12 +132,6 @@ ai-smart-finance-cicd/
 │
 ├── tests/
 │   └── test_app.py
-│
-├── docs/
-│   ├── laporan.pdf
-│   ├── workflow.png
-│   └── architecture.png
-│
 ├── requirements.txt
 ├── Dockerfile
 ├── .dockerignore
